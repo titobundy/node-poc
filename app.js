@@ -15,7 +15,8 @@ mongoose.connect('mongodb+srv://cluster0.sfdso.mongodb.net', {
     user : 'api-user',
     pass: '0GZCvkRqaQ8xDs0w',
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
 })
 .then(() => {
     console.log('Mongodb connected')

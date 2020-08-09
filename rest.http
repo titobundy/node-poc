@@ -1,3 +1,4 @@
+### Geta list of all products
 GET http://localhost:3000/products
 
 ### Create a product
@@ -10,13 +11,19 @@ Content-Type: application/json
 }
 
 ### Get a product by id
-GET http://localhost:3000/products/id
+GET http://localhost:3000/products/5f304c3249a0bd1b30540721
 
 ### Update a product by id
-PATCH http://localhost:3000/products/id
+PATCH http://localhost:3000/products/5f304c3249a0bd1b30540721
+Content-Type: application/json
+
+{
+    "name" : "iPhone 11 Pro",
+    "price" : 999
+}
 
 ### Delete a product by id
-DELETE http://localhost:3000/products/id
+DELETE http://localhost:3000/products/5f304dbfa6b7471b904de41f
 
 ### Other
 GET http://localhost:3000/user/1
