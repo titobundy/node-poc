@@ -1,0 +1,22 @@
+{
+  "name": "poc_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/titobundy/node-poc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/titobundy/node-poc/issues"
+  },
+  "homepage": "https://github.com/titobundy/node-poc#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
