@@ -3,10 +3,14 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+//
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // Mongo Atlas
 // api-user
 // 0GZCvkRqaQ8xDs0w
-mongoose.connect('mongodb+srv://cluster0.sfdso.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://cluster0.sfdso.mongodb.net', {
     dbName : 'rest-api',
     user : 'api-user',
     pass: '0GZCvkRqaQ8xDs0w',
