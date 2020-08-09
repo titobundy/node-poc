@@ -7,20 +7,15 @@ router.get('/', (req, res, next) => {
     res.send('getting a list of all products');
 });
 
-router.post('/', (req, res, next) => {
-    console.log(req.body);
-    const product = new Product({
-        name: req.body.name,
-        price: req.body.price
-    });
-    product.save()
-        .then(result => {
-            console.log(result);
-            res.send(result);
-        })
-        .catch(err => {
-            console.log(err.message);
-        });
+router.post('/', async (req, res, next) => {
+    try {
+        const product = new Product(req.body);
+        const result = await product.save();
+
+        res.send(result);
+    } catch (error) {
+        console.log(error);
+    }
 });
 
 router.get('/:id', (req, res, next) => {

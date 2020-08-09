@@ -5,8 +5,8 @@ POST http://localhost:3000/products
 Content-Type: application/json
 
 {
-    "name": "iPhone 11 Pro",
-    "price": 999
+    "name": "iPhone 11 Pro Max",
+    "price": 1199
 }
 
 ### Get a product by id
