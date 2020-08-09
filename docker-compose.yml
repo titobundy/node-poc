@@ -1,0 +1,8 @@
+version: '3.2'
+
+services:
+  db:
+    image: mongo:4.4.0
+    container_name: "github-poc-mongodb"
+    ports:
+      - "28017:27017"   

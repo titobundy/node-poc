@@ -13,4 +13,4 @@ PATCH http://localhost:3000/products/id
 DELETE http://localhost:3000/products/id
 
 ### Other
-GET http://localhost:3000/
+GET http://localhost:3000/user/1
