@@ -13,6 +13,12 @@ router.get('/:id', (req, res, next) => {
     res.send('getting a single product');
 });
 
+router.put('/:id', (req, res, next) => {
+    //const err = new Error("Access Denied By Keycloak");
+    //err.status = 401;
+    //next(err);
+});
+
 router.patch('/:id', (req, res, next) => {
     res.send('updating a single product');
 });
