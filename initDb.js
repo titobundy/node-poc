@@ -15,10 +15,10 @@ module.exports = () => {
     // Mongo Atlas
     // api-user
     // 0GZCvkRqaQ8xDs0w
-    mongoose.connect('mongodb+srv://cluster0.sfdso.mongodb.net', {
-        dbName : 'rest-api',
-        user : 'api-user',
-        pass: '0GZCvkRqaQ8xDs0w',
+    mongoose.connect(process.env.MONGODB_URI, {
+        dbName : process.env.DB_NAME,
+        user : process.env.DB_USER,
+        pass: process.env.DB_PASS,
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false
@@ -43,6 +43,7 @@ module.exports = () => {
     process.on('SIGINT', () => {
         mongoose.connection.close(() => {
             console.log('Mongoose connection is disconnected due to app termination...');
+            process.exit(0);
         });
     });
 }
