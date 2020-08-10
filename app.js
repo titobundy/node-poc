@@ -1,5 +1,4 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const createError = require('http-errors');
 
 const app = express();
@@ -9,29 +8,8 @@ app.use(express.json());
 // Accept Content-Type application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
-// Mongo Atlas
-// api-user
-// 0GZCvkRqaQ8xDs0w
-mongoose.connect('mongodb+srv://cluster0.sfdso.mongodb.net', {
-    dbName : 'rest-api',
-    user : 'api-user',
-    pass: '0GZCvkRqaQ8xDs0w',
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
-})
-.then(() => {
-    console.log('Mongodb connected')
-});
-
-// Mongo Local Docker
-// mongoose.connect('mongodb://localhost:28017/rest-api', {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-// })
-// .then(() => {
-//     console.log('Mongodb connected')
-// });
+// Initialize Mongo DB
+require('./initDb')();
 
 const ProductRoute = require('./routes/product.route');
 app.use('/products', ProductRoute);
