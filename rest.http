@@ -6,24 +6,24 @@ POST http://localhost:3000/products
 Content-Type: application/json
 
 {
-    "name": "iPhone 11 Pro Max",
+    "name": "iPhone X",
     "price": 1199
 }
 
 ### Get a product by id
-GET http://localhost:3000/products/5f304bd649a0bd1b3054072
+GET http://localhost:3000/products/5f304bd649a0bd1b30540720
 
 ### Update a product by id
-PATCH http://localhost:3000/products/5f304c3249a0bd1b30540722
+PATCH http://localhost:3000/products/5f304bd649a0bd1b30540720
 Content-Type: application/json
 
 {
-    "name" : "iPhone 11 Pro",
-    "price" : 899
+    "name" : "iPhone 11",
+    "price" : 599
 }
 
 ### Delete a product by id
-DELETE http://localhost:3000/products/5f304dbfa6b7471b904de41f
+DELETE http://localhost:3000/products/5f3196fa1923a1075023dd2a
 
 ### Other
 GET http://localhost:3000/user/1
